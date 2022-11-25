@@ -31,4 +31,10 @@ class CustomerController {
     fun update(@PathVariable id: Int, @RequestBody putCustomerRequest: PutCustomerRequest){
         println(putCustomerRequest)
     }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun delete(@PathVariable id: Int){
+        println("Delete id: $id")
+    }
 }
